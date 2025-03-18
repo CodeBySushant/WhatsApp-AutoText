@@ -2,16 +2,16 @@ import pywhatkit as pwk
 import pyautogui
 import time
 
-phone_number = "+918271278494"
+phone_number = "+916204653603"
 message = "Hello World!"
 
-# Send message instantly with a short wait time
-pwk.sendwhatmsg_instantly(phone_number, message, wait_time=20, tab_close=True)
+# Send message instantly
+pwk.sendwhatmsg_instantly(phone_number, message, wait_time=10, tab_close=False)
 
-# Wait a few seconds to make sure the message is typed
-time.sleep(5)
+# Short wait: Give the browser time to type the message (experiment with this)
+time.sleep(3)  # You can try 2 if it's fast enough
 
-# Press Enter to send it
+# Instantly press Enter
 pyautogui.press("enter")
 
-print("Message sent successfully!")
+print("Done! Message sent instantly.")
